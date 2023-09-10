@@ -2,6 +2,19 @@
 
 API ROUTES IN NEXT JS
 
+     src/app/api/hello/route.js
+
+        export async function GET(req) {
+        return new Response("hello ,Next.js;");
+         }
+
+     src/app/api/user/route.js
+
+                import { NextResponse } from "next/server";
+            export async function GET(request) {
+            return NextResponse.json({ name: "ankit", age: 55 }, { status: 200 });
+            }
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
