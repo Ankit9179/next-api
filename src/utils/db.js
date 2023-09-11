@@ -1,27 +1,22 @@
 export const data = [
   {
-    name: "aaa",
+    name: "jon",
     age: 45,
     id: 10,
   },
   {
-    name: "aab",
-    age: 446,
+    name: "peter",
+    age: 44,
     id: 20,
   },
   {
-    name: "aac",
+    name: "jem",
     age: 47,
     id: 30,
   },
   {
-    name: "aad",
+    name: "hosh",
     age: 48,
     id: 40,
-  },
-  {
-    name: "aae",
-    age: 49,
-    id: 50,
   },
 ];

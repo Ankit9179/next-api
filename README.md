@@ -33,6 +33,18 @@ GET API WITH NEXT.JS
             );
             }
 
+# video no. 38
+
+VIDEO NO 38 ABOUT POST API
+
+      src/api/user/route.js
+
+    export async function POST(req) {
+    const paylod = await req.json();
+    console.log(paylod.name);
+    return NextResponse.json("hello");
+    }
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
