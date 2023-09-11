@@ -15,6 +15,24 @@ API ROUTES IN NEXT JS
             return NextResponse.json({ name: "ankit", age: 55 }, { status: 200 });
             }
 
+# video no. 36
+
+GET API WITH NEXT.JS
+
+              src/app/api/hello/route.js
+
+            import { NextResponse } from "next/server";
+            import { data } from "@/utils/db.js";
+
+            export function GET(request, conntent) {
+            const user = data.filter((item) => item.id == conntent.params.id);
+            return NextResponse.json(
+                user.length == 0
+                ? { result: "no data found", success: false }
+                : { result: user, success: true }
+            );
+            }
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
