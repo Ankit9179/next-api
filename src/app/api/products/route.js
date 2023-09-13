@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { productModel } from "../models/product";
 
-console.log(connectionString);
 export async function GET() {
   await mongoose.connect(connectionString);
   const data = await productModel.find();
@@ -12,8 +11,8 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const payload = await request.json();
   await mongoose.connect(connectionString);
+  const payload = await request.json();
   const productData = new productModel(payload);
   const res = await productData.save();
   return NextResponse.json({
